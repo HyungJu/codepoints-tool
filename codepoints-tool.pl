@@ -5,8 +5,9 @@ use strict; use warnings;
 
   open  IN, "<:utf8", $ARGV[0] or die "$!\n";
   open  IN2, "<:utf8", $ARGV[0] or die "$!\n";
+
   open OUT, ">:utf8", "codepoints.json" or die "$!\n";
-  
+
   printf OUT '{'."\n".'    "codepoints": ['."\n";
 
   while (<IN>) {
@@ -36,7 +37,7 @@ use strict; use warnings;
   close IN;
   close IN2;
   close OUT;
-
+printf "Done!\n";
 
 
 
@@ -53,7 +54,7 @@ Made by SUNG HyungJu (sungkisa)
 :
 
         Usage:
-                perl codepoints-tool.pl <Text File or .po File>
+                perl codepoints-tool.pl <Text File or .po File> 
 
         Example:
                 perl codepoints-tool.pl 000.po
@@ -64,4 +65,3 @@ Made by SUNG HyungJu (sungkisa)
 
 TEXT
 }
-
